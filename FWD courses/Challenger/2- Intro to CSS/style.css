@@ -1,0 +1,13 @@
+
+p { color: purple;}
+
+
+.outer {
+    width: 300px;
+    border: 5px dotted red;
+}
+
+.inner {
+    border: 5px solid red;
+    width: 50%;
+}
