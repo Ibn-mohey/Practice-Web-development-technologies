@@ -696,3 +696,180 @@ Let's be boxes together. Yay, flexbox.
 [IPND Reference Sheet - CSS Syntax](https://video.udacity-data.com/topher/2018/June/5b340432_ipnd-reference-sheet-css-syntax/ipnd-reference-sheet-css-syntax.pdf)
 
 ---
+
+#Advanced CSS
+
+##flex box
+
+###to use start with
+```CSS
+{display: flex;}
+```
+
+###then go to the axes you want
+
+flex-direction: column;  Vertically
+flex-direction: row;     Horizontally
+
+##order the item
+and the direction of the flow
+
+flex-direction: column;           Vertically  up to down
+flex-direction: column-reverse;    Vertically down to up
+
+flex-direction: row;              Horizontally  left to right
+flex-direction: row-reverse;     Horizontally right to left
+
+order manually
+use id
+
+```CSS
+.class{
+  display: flex;
+  flex-direction: column;
+}
+    #id{
+    order:1;
+  }
+
+    #id{
+    order:2;
+  }
+```
+###Aligning Items & Justifying Content with Flexbox
+To align items on the cross axis use align-items with the possible values:
+```CSS
+.class
+{align-items:
+}
+```
+
+- stretch
+- flex-start
+- flex-end
+- center
+
+To justify content on the main axis use justify-content, which has the possible values:
+```CSS
+.class
+{justify-content:
+}
+```
+
+- flex-start
+- flex-end
+- center
+- space-around
+- space-between
+- space-evenly
+
+##Grid vs Flexbox
+
+Flexbox is for how content flows, Grid is for how content is placed - i.e. grid works nicely for page layouts, flex works nicely for regions within the grid
+
+Recap
+CSS Grid v. Flexbox
+
+- Grid is two dimensional, while Flex is one
+- Grid is layout first, while Flexbox is content first
+- Flex is for components of an app, Grid is for the app layout itself
+
+
+CSS Grid does not replace Flexbox. Each can achieve things that the other is not capable of, and in fact, a true master can use Flexbox and CSS Grid together in harmony to create the ultimate webpage layout.
+
+At the highest level CSS Grid excels at creating layouts for a webpage, while Flexbox is a master of content flow for each element that makes up the page layout.
+
+Further Research
+For more information on CSS Grid and Flexbox together see the articles below:
+For more information on CSS Grid and Flexbox together see the articles below:
+
+*   [Beginner’s Guide to choosing between CSS Grid and Flexbox](https://medium.com/youstart-labs/beginners-guide-to-choose-between-css-grid-and-flexbox-783005dd2412)
+*   [The Ultimate CSS Battle: Grid vs. Flexbox](https://hackernoon.com/the-ultimate-css-battle-grid-vs-flexbox-d40da0449faf)
+*   [Does CSS Grid Replace Flexbox?](https://css-tricks.com/css-grid-replace-flexbox/)
+
+CSS properties for grids
+
+- `grid-template-columns`
+- `grid-template-rows`
+- `grid-gap`
+examples
+
+```CSS
+{
+  display: grid;
+  grid-column: 35vw 35vw; /* means 2 columns */
+  grid-row: 45vh 45vh; /* means 2 rows*/
+  grid-gap: 15px; /*create a gap*/
+  /*or use */
+  grid-area: 1/2/3/3
+}
+```
+
+Because`grid-area` is shorthand for the properties: `grid-row-start`, `grid-column-start`, `grid-row-end` and `grid-column-end`, the code above places the item from rows 1-3, and columns 2-3.
+
+usefull use
+
+1-
+```CSS
+.forclass
+{
+  display: grid;
+  grid-column: 35vw 35vw; /* means 2 columns */
+  grid-row: 45vh 45vh; /* means 2 rows*/
+  grid-gap: 15px; /*create a gap*/
+  /*or use */
+  grid-template-areas:
+  "top top" /* only one*/
+  "bottomLeft bottomRight"/* two ones */
+}
+```
+
+after that make  id for what u want
+
+
+```CSS
+#forid
+{
+  grid-area: top;
+}
+
+```
+CSS Grid includes advanced capabilities for creating large and complex grids. Some of these are:
+
+*   the `fr` Unit
+*   Track listings with `repeat()` notation `grid-template-columns: repeat(7, 1fr);`
+*   Track sizing and `minmax()`  `grid-auto-rows: minmax(100px, auto);`
+
+---
+
+
+# Wordpress :
+
+*   Free and open source [application](https://wordpress.org/download/)
+*   Can be used to develop your own websites using the application development environment
+*   a correct use of the term would be " my recent website is powered by wordpress"
+
+## Wordpress.com :
+
+*   Is a SaaS (software as a service)
+*   Can be used to publish your website through the platform
+*   Can't upload plugins
+*   Limited customizable themes
+*   Private domain name not available
+*   a correct use of the term would be " i created my first blog using wordpress.com"
+
+## Wordpress.org:
+
+*   The website where the wordpress application is [hosted](https://wordpress.org/)
+*   Documentation is found [here](https://wordpress.org/support/)
+*   Access to thousands of plugins
+*   Ability to have your own domain name
+*   Ability to monetize your website through Ad placements
+
+##Wordpress
+
+- is used to publish content on the web
+- acts as an interface between the publisher, the database and the visitor
+- is used to publish content on the web
+- content is stored as database entries
+- Wordpress does what we call seperation of concerns, giving you the outmost control for every detail on your website.
