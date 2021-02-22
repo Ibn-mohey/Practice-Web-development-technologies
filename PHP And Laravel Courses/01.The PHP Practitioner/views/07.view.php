@@ -11,7 +11,7 @@
                     <del>
                         <?= $ii->description; ?>
                     </del>
-<!-- not complteed -->
+<!-- not completed -->
                 <?php else : ?>
                     <?= $ii->description; ?>
                 <?php endif; ?>
@@ -19,6 +19,6 @@
         <?php endforeach; ?>
     </ul>
 
-    
+
 
     <?php require ('partials/footer.php'); ?>

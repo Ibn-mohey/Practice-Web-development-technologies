@@ -20,7 +20,6 @@ class QueryBuilder
             $stat->execute();
         
             // return $stat->fetchAll(PDO::FETCH_CLASS, 'Task');
-
             // make the function accept null calls if there was no class
             if (isset ( $intoclass)){
             return $stat->fetchAll(PDO::FETCH_CLASS, $intoclass);
