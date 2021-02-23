@@ -1,9 +1,9 @@
 <?php
-
+require 'vendor/autoload.php';
 
 $database  = require 'core/07.bootstrap.php';
 
-$router = new Router;
+// $router = new Router;
 
 
 
