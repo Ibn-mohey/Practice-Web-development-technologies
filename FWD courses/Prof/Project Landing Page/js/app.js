@@ -79,6 +79,8 @@ function setActiveSection(){
             // for current section add your-active-class from css file
             if (i == visibleSectionIndex){
                 section[i].classList.add('your-active-class');
+            }else{
+                navSections[i].classList.remove('your-active-class');
             }
         };
     };
