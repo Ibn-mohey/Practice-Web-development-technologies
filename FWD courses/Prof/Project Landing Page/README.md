@@ -1,10 +1,5 @@
 # Landing Page Project
 
-## Table of Contents
-
-* [Instructions](#instructions)
-* [About](#About)
-
 ## About
 
 ## Project Summary
