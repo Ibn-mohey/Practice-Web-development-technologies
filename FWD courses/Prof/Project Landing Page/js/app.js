@@ -80,7 +80,7 @@ function setActiveSection(){
             if (i == visibleSectionIndex){
                 section[i].classList.add('your-active-class');
             }else{
-                navSections[i].classList.remove('your-active-class');
+                section[i].classList.remove('your-active-class');
             }
         };
     };
