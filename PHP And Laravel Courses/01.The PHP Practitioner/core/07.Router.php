@@ -3,7 +3,10 @@
 class Router
 {
 
-    protected $routes = [];
+    public $routes = [
+        'GET' => [] ,
+        'POST'=> []
+    ];
 
     public static function load($file)
     {
@@ -15,17 +18,31 @@ class Router
     }
 
 
-    public function define($routes)
+    // public function define($routes)
+    // {
+    //     # code...
+    //     $this->routes = $routes;
+    // }
+
+    public function get($uri , $controller)
     {
         # code...
-        $this->routes = $routes;
+        $this->routes['GET'][$uri] = $controller;
     }
 
-    public function direct($uri)
+    public function post($uri , $controller)
     {
         # code...
-        if (array_key_exists($uri , $this->routes)){
-            return $this->routes[$uri];
+        $this->routes['POST'][$uri] = $controller;
+    }
+
+    public function direct($uri , $requestType)
+    {
+        # code...
+
+        if (array_key_exists($uri , $this->routes[$requestType])){
+
+            return $this->routes[$requestType][$uri];
         }
         else {
 

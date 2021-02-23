@@ -17,7 +17,7 @@ $router = new Router;
 
 
 require Router::load('07.routes.php')
-    ->direct(Request::uri());
+    ->direct(Request::uri(), Request::method());
 
 // $router = Router::load('07.routes.php');
 
