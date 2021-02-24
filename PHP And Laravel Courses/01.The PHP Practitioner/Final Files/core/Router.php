@@ -1,5 +1,6 @@
 <?php
 
+
 class Router
 {
 
@@ -39,15 +40,29 @@ class Router
     public function direct($uri , $requestType)
     {
         # code...
-
         if (array_key_exists($uri , $this->routes[$requestType])){
-
-            return $this->routes[$requestType][$uri];
+            //dd(explode('@' , $this->routes[$requestType][$uri]));
+            return $this->callAction(
+                ...explode('@' , $this->routes[$requestType][$uri])
+            );
+            // return $this->routes[$requestType][$uri];
         }
         else {
 
             throw new Exception('404');
         }
 
+    }
+    protected function callAction($controller, $action)
+    {
+
+        $controller = new $controller;
+
+        //dd(var_dump($controller , $action));
+        # code....
+        if(! method_exists($controller , $action)){
+            throw new Exception("{$controller} with no {$action} action.");
+        }
+        return $controller->$action();
     }
 }

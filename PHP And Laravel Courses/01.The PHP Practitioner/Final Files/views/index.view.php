@@ -2,16 +2,15 @@
     <?php require ('partials/head.php'); ?>
 
 
-
-    <ul>
-        <?php foreach ($tasks as $ii) : ?>
+<!--
+ <ul>
+ <?php foreach ($tasks as $ii) : ?>
 
              <li>
                 <?php if ($ii->completed) : ?>
                     <del>
                         <?= $ii->description; ?>
                     </del>
-<!-- not completed -->
                 <?php else : ?>
                     <?= $ii->description; ?>
                 <?php endif; ?>
@@ -32,7 +31,7 @@
     <form method="POST" action="/names">
     <input name="name"></input>
     <button type="submit"> ok</button>
-    </form>
+    </form> -->
 
 
 

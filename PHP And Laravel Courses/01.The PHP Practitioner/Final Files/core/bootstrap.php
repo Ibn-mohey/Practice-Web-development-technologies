@@ -10,4 +10,17 @@ App::bind('database',  new QueryBuilder(
 ));
 
 
+function view($name, $data =[ ])
+{
+    # code...
+    extract($data);
+    return require "views/{$name}.view.php";
+}
+
+function redirect($path)
+{
+    # code...
+    header('Location: /users');
+}
+
 
