@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\PostsController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,22 +26,17 @@ Route::get('/', function () {
 Route::get('/welcome', function () {
     return view('welcome');
 });
-Route::get('/posts/{post}', function ($post) {
-    $postss = [
-'first' => '111111',
-'second' => ' 222222'
-
-    ];
-
-    if (! array_key_exists($post, $postss) ) {
-        abort(404);
-        # code...;
-    }
-    return view('post', ['post' => $postss[$post]]);
-
-});
 
 
+
+
+// Route::get('/posts/{post}', function ($post) {
+
+
+// });
+
+// Route::get('/posts/{post}', 'PostsController@show');
+Route::get('posts/{post}', [PostsController::class, 'show']);
 // Route::get('test', function () {
 //     return view('test' ,);
 //     // return 'Hello world';
