@@ -1,6 +1,6 @@
 ## [Source](https://laracasts.com/series/laravel-6-from-scratch)
 
-### create new project 
+### create a new project 
 
 in cmd type `laravel new name`
 
@@ -16,3 +16,15 @@ type `php artisan serve --port=8080` to load the server and open it in any brows
 
 ### why blade 
 1. we can use `{{$variable}}` which is more sequre than normal var
+
+### make migration for the Tables 
+`php artisan make:migration create_posts_table`
+
+### start migration
+`php artisan migrate`
+
+### to rollback
+`php artisan migrate:rollback`
+
+### timestamps for created and midofied 
+timstamp without s for others
