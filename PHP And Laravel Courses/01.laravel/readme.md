@@ -14,4 +14,5 @@ type `code .`
 add new terminal 
 type `php artisan serve --port=8080` to load the server and open it in any browser [`127.0.0.1:8080`](http://127.0.0.1:8080)
 
-
+### why blade 
+1. we can use `{{$variable}}` which is more sequre than normal var
