@@ -23,6 +23,21 @@ Route::get('/', function () {
 Route::get('/welcome', function () {
     return view('welcome');
 });
+Route::get('/posts/{post}', function ($post) {
+    $postss = [
+'first' => '111111',
+'second' => ' 222222'
+
+    ];
+
+    if (! array_key_exists($post, $postss) ) {
+        abort(404);
+        # code...;
+    }
+    return view('post', ['post' => $postss[$post]]);
+
+});
+
 
 // Route::get('test', function () {
 //     return view('test' ,);
