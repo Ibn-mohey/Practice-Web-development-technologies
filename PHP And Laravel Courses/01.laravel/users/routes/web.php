@@ -30,14 +30,4 @@ Route::get('/welcome', function () {
 
 
 
-// Route::get('/posts/{post}', function ($post) {
-
-
-// });
-
-// Route::get('/posts/{post}', 'PostsController@show');
 Route::get('posts/{post}', [PostsController::class, 'show']);
-// Route::get('test', function () {
-//     return view('test' ,);
-//     // return 'Hello world';
-// });
