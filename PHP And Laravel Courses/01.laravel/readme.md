@@ -53,3 +53,14 @@ timstamp without s for others
 `php artisan tinker`
 i can play with the database here and fetch and add more things to it 
 `App\Models\Assignment::first` to fetch 
+
+### site Template
+assets will go in 
+
+public 
+
+
+### More with database 
+again `php artisan tinker` to play with the database 
+and more we can call it throw 
+`all` or `paginate(2)` or `::take(2)->get();`
