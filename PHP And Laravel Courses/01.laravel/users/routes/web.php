@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\PostsController;
-
+use App\Http\Controllers\SimpleArticlesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,7 +33,7 @@ Route::get('/simple', function () {
 Route::get('/simpleAbout', function () {
     // return $article;
     return view(
-        'simpleAboutus',
+        'simpleAboutUs',
         [
             'article' => \App\Models\Article::take(3)->latest()->get(),
         ]
@@ -41,3 +41,6 @@ Route::get('/simpleAbout', function () {
 });
 
 Route::get('posts/{post}', [PostsController::class, 'show']);
+
+Route::get('simpleArticles/{article}', [SimpleArticlesController::class, 'show']);
+

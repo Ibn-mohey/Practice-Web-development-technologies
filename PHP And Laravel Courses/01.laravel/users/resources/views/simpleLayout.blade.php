@@ -17,8 +17,8 @@ Released   : 20140225
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-<link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
@@ -34,7 +34,7 @@ Released   : 20140225
 					<li class= "{{ Request::path() === 'simple' ? 'current_page_item' : '' }}" ><a href="/simple" accesskey="1" title="">Homepage</a></li>
 					<li class= "{{ Request::path() === 'simpleClients' ? 'current_page_item' : '' }}" ><a href="#" accesskey="2" title="">Our Clients</a></li>
 					<li class= "{{ Request::path() === 'simpleAbout' ? 'current_page_item' : '' }}" ><a href="/simpleAbout" accesskey="3" title="">About Us</a></li>
-					<li class= "{{ Request::path() === 'simpleCareers' ? 'current_page_item' : '' }}" ><a href="#" accesskey="4" title="">Careers</a></li>
+					<li class= "{{ Request::path() === 'simpleArticles' ? 'current_page_item' : '' }}" ><a href="#" accesskey="4" title="">Articles</a></li>
 					<li class= "{{ Request::path() === 'simpleContact' ? 'current_page_item' : '' }}" ><a href="#" accesskey="5" title="">Contact Us</a></li>
 				</ul>
 			</div>
