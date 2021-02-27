@@ -74,3 +74,5 @@ and more we can call it throw
 6. update
 7. destroy
 
+to create all above we can use 
+`PHP artisan make:controller ProjectsController -r -m Projects -yes`
