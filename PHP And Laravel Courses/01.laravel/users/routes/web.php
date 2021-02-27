@@ -44,3 +44,4 @@ Route::get('posts/{post}', [PostsController::class, 'show']);
 
 Route::get('simpleArticles/{article}', [SimpleArticlesController::class, 'show']);
 
+Route::get('simpleArticles', [SimpleArticlesController::class, 'main']);

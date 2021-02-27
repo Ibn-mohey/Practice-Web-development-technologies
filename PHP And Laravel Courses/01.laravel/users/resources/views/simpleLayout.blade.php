@@ -34,7 +34,7 @@ Released   : 20140225
 					<li class= "{{ Request::path() === 'simple' ? 'current_page_item' : '' }}" ><a href="/simple" accesskey="1" title="">Homepage</a></li>
 					<li class= "{{ Request::path() === 'simpleClients' ? 'current_page_item' : '' }}" ><a href="#" accesskey="2" title="">Our Clients</a></li>
 					<li class= "{{ Request::path() === 'simpleAbout' ? 'current_page_item' : '' }}" ><a href="/simpleAbout" accesskey="3" title="">About Us</a></li>
-					<li class= "{{ Request::path() === 'simpleArticles' ? 'current_page_item' : '' }}" ><a href="#" accesskey="4" title="">Articles</a></li>
+					<li class= "{{ Request::path() === 'simpleArticles' ? 'current_page_item' : '' }}" ><a href="/simpleArticles" accesskey="4" title="">Articles</a></li>
 					<li class= "{{ Request::path() === 'simpleContact' ? 'current_page_item' : '' }}" ><a href="#" accesskey="5" title="">Contact Us</a></li>
 				</ul>
 			</div>

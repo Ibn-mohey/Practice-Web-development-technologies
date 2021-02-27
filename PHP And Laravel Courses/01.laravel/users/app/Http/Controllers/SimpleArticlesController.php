@@ -15,4 +15,15 @@ class SimpleArticlesController extends Controller
 
         return view('simpleArticle.show', ['article' => $article]);
     }
+
+    public function main()
+    {
+        # code...
+        return view(
+            'simpleArticle',
+            [
+                'articles' => Article::take(3)->latest()->get(),
+            ]
+        );
+    }
 }
