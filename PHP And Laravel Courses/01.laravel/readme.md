@@ -84,4 +84,12 @@ to create all above we can use
 * Put / update
 * Delete / some Data
 * Post / video / subscription 
-* 
+
+### validatiom
+According to the laravel docs you can also use $message variable inside the @error directive
+
+```php
+@error('title')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+```
