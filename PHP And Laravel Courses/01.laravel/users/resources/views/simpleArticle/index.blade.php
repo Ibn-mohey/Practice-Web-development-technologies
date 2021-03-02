@@ -3,6 +3,7 @@
 
 @section('content')
 
+<button type="button" onclick="window.location='/simpleArticles/create'">Create</button>
 
 <div id="wrapper">
 	<div id="page" class="container">
@@ -13,9 +14,9 @@
                 <p><img src="images/banner.jpg" alt="" class="image image-full" /> </p>
 				<span class="byline">{{ $article->excerpt }} </span> </div>
                 @endforeach
-			
-			
-			
+
+
+
 		</div>
 
 

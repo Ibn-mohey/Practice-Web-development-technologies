@@ -38,6 +38,12 @@ class SimpleArticlesController extends Controller
     {
         # code... make the create work in the end
         // dump(request()->all());
+
+        request()->validate([
+            'title' => 'required' ,
+            'excerpt' => 'required' ,
+            'body' => 'required' ,
+        ]);
         $article = new Article();
 
         $article->title = request('title');
@@ -55,6 +61,11 @@ class SimpleArticlesController extends Controller
     }
     public function update($articleID)
     {
+        request()->validate([
+            'title' => 'required' ,
+            'excerpt' => 'required' ,
+            'body' => 'required' ,
+        ]);
         # code...make the update work in the end
         $article = Article::find($articleID);
 
