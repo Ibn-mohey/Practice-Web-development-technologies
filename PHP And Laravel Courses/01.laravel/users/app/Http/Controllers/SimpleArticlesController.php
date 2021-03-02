@@ -47,13 +47,23 @@ class SimpleArticlesController extends Controller
         return redirect('/simpleArticles');
 
     }
-    public function edit()
+    public function edit($articleID)
     {
         # code... view to edit the item
+        $article = Article::find($articleID);
+        return view('simpleArticle.edit', ['article' => $article]);
     }
-    public function update()
+    public function update($articleID)
     {
         # code...make the update work in the end
+        $article = Article::find($articleID);
+
+        $article->title = request('title');
+        $article->excerpt = request('excerpt');
+        $article->body = request('body');
+        $article->save();
+        return redirect('/simpleArticles/' . $article->id);
+
     }
     public function destroy()
     {
