@@ -42,6 +42,12 @@ Route::get('/simpleAbout', function () {
 
 Route::get('posts/{post}', [PostsController::class, 'show']);
 
+Route::get('simpleArticles/create', [SimpleArticlesController::class, 'create']);
+
 Route::get('simpleArticles/{article}', [SimpleArticlesController::class, 'show']);
 
+
+
 Route::get('simpleArticles', [SimpleArticlesController::class, 'index']);
+
+Route::post('/simpleArticles', [SimpleArticlesController::class, 'store']);

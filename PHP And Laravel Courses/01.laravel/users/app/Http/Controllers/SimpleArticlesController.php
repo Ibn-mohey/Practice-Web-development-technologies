@@ -30,11 +30,22 @@ class SimpleArticlesController extends Controller
     public function create()
     {
         # code... view to create new one
+        return view('simpleArticle.create');
     }
+
 
     public function store()
     {
         # code... make the create work in the end
+        // dump(request()->all());
+        $article = new Article();
+
+        $article->title = request('title');
+        $article->excerpt = request('excerpt');
+        $article->body = request('body');
+        $article->save();
+        return redirect('/simpleArticles');
+
     }
     public function edit()
     {

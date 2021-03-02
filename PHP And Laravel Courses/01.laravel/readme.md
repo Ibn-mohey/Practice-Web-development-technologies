@@ -76,3 +76,12 @@ and more we can call it throw
 
 to create all above we can use 
 `PHP artisan make:controller ProjectsController -r -m Projects -yes`
+
+* Get / some data
+* GET /Create Some Data 
+* POST / the new Data
+* Get / Edit some Data 
+* Put / update
+* Delete / some Data
+* Post / video / subscription 
+* 
